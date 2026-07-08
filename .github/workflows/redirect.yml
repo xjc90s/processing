@@ -15,11 +15,11 @@ jobs:
       - uses: actions/github-script@v9
         with:
           script: |
-            > Thanks for your report. Please note that this repository is inactive and only kept for legacy purposes.
-            > 
-            > If you're reporting a bug or requesting a feature for Processing 4, please open an issue in **[processing/processing4](https://github.com/processing/processing4/issues/new/choose)** instead.
-            > 
-            > This issue will be closed automatically.
+            const body = `> Thanks for your report. Please note that this repository is inactive and only kept for legacy purposes.
+            >
+            > If you're reporting a bug or requesting a feature for Processing 4, please open an issue in **https://github.com/processing/processing4/issues/new/choose** instead.
+            >
+            > This issue will be closed automatically.`;
 
             await github.rest.issues.createComment({
               owner: context.repo.owner,
